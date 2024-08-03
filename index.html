@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Alert</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button id="open-popup">Validate</button>
+        <div class="card">
+            <!-- <img src="OIP.jfif" alt="Success"> -->
+            <img src="OIP-removebg-preview.png" alt="Success">
+            <h2>Thank You !</h2>
+            <p>Your information has been successfully submited Thaks</p>
+            <button id="close-popup">Okay</button>
+        </div>
+    </div>
+
+    <script>
+        const openPopup = document.querySelector('#open-popup') 
+        const closePopup = document.querySelector('#close-popup') 
+        const card = document.querySelector('.card') 
+
+        openPopup.addEventListener("click", ()=>{
+            card.style.visibility = 'visible'
+            card.style.transform = 'translate(-50%, -50%)'
+            card.style.top = '50%'
+        })
+
+        closePopup.addEventListener("click", ()=>{
+            card.style.transform = 'translate(-50%, -50%) scale(0.1)'
+            card.style.top = '0'
+            card.style.visibility = 'hidden'
+        })
+    </script>
+</body>
+</html>
